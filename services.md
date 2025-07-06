@@ -1,6 +1,7 @@
 #Expose NodePort Service  
 A NodePort allows you to access a service from outside the Kubernetes cluster by exposing it on a static port on each node's IP address.  
 > vim node-port.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -18,6 +19,7 @@ spec:
 # Expose ClusterIP Service
 A ClusterIP is the default service type in Kubernetes and is used to expose services internally within the cluster only. It allows pods within the cluster to communicate with each other via a stable, internal IP address.  
 > vim cluster-ip.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -34,6 +36,7 @@ spec:
 # Expose Load Balancer Service
 A LoadBalancer service in Kubernetes exposes your application to the internet by provisioning an external IP address using a cloud provider’s load balancer (like AWS ELB, Azure Load Balancer, GCP, etc.).  
 > vim lb-service.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
